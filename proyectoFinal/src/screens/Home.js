@@ -2,5 +2,10 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 export default function Home() {
-  return <></>;
+  return (
+    <View>
+      <Text>Home</Text>
+      <Text>Casita</Text>
+    </View>
+  );
 }
