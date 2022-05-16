@@ -15,19 +15,58 @@ import Tickets from "./src/screens/Tickets";
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator screenOptions={{headerShown:false}} barStyle={{ paddingBottom: 15 }, { paddingTop: 15 }}>
-        <Tab.Screen name="Home" component={Home} options={{
-                    tabBarIcon: () => (<Image source={require('./src/images/icons/home.png')} style={{width: 25, height: 25}} />)
-                }}/>
-        <Tab.Screen name="Artists" component={Artists} options={{
-                    tabBarIcon: () => (<Image source={require('./src/images/icons/artists.png')} style={{width: 25, height: 25}} />)
-                }}/>
-        <Tab.Screen name="Gallery" component={Gallery} options={{
-                    tabBarIcon: () => (<Image source={require('./src/images/icons/gallery.png')} style={{width: 25, height: 25}} />)
-                }}/>
-        <Tab.Screen name="Tickets" component={Tickets} options={{
-                    tabBarIcon: () => (<Image source={require('./src/images/icons/tickets.png')} style={{width: 25, height: 25}} />)
-                }}/>
+      <Tab.Navigator
+        screenOptions={{ headerShown: false }}
+        barStyle={({ paddingBottom: 15 }, { paddingTop: 15 })}
+      >
+        <Tab.Screen
+          name="Home"
+          component={Home}
+          options={{
+            tabBarIcon: () => (
+              <Image
+                source={require("./src/images/icons/home.png")}
+                style={{ width: 25, height: 25 }}
+              />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Artists"
+          component={Artists}
+          options={{
+            tabBarIcon: () => (
+              <Image
+                source={require("./src/images/icons/artists.png")}
+                style={{ width: 25, height: 25 }}
+              />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Gallery"
+          component={Gallery}
+          options={{
+            tabBarIcon: () => (
+              <Image
+                source={require("./src/images/icons/gallery.png")}
+                style={{ width: 25, height: 25 }}
+              />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Tickets"
+          component={Tickets}
+          options={{
+            tabBarIcon: () => (
+              <Image
+                source={require("./src/images/icons/tickets.png")}
+                style={{ width: 25, height: 25 }}
+              />
+            ),
+          }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );
