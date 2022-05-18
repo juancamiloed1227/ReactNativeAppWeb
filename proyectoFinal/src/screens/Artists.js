@@ -18,10 +18,6 @@ export default function Artists() {
         </View>
         <Text style={styles.tituloT}>Artists</Text>
       </View>
-      <View>
-        <Text>Artistssss</Text>
-        <Text>Aristddd</Text>
-      </View>
     </View>
   );
 }
