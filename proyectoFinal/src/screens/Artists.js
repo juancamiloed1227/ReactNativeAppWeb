@@ -8,20 +8,7 @@ const image = require("../images/title/title.png");
 export default function Artists() {
   return (
     <View>
-      <View style={styles.header}>
-        <View style={styles.title}>
-          <ImageBackground
-            resizeMode="contain"
-            source={image}
-            style={styles.title}
-          ></ImageBackground>
-        </View>
-        <Text style={styles.tituloT}>Artists</Text>
-      </View>
-      <View>
-        <Text>Artistssss</Text>
-        <Text>Aristddd</Text>
-      </View>
+      
     </View>
   );
 }
