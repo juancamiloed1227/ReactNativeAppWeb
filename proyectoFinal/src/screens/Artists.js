@@ -1,7 +1,5 @@
 import React from "react";
 import { ImageBackground, StyleSheet, Text, View } from "react-native";
-import { VERTICAL } from "react-native/Libraries/Components/ScrollView/ScrollViewContext";
-import LinearGradient from "react-native-linear-gradient";
 
 const image = require("../images/title/title.png");
 
