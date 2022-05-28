@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 //Para el menu
 const Tab = createBottomTabNavigator();
@@ -11,72 +12,56 @@ import Home from "./src/screens/Home";
 import Artists from "./src/screens/Artists";
 import Gallery from "./src/screens/Gallery";
 import Tickets from "./src/screens/Tickets";
+import Title from './src/components/Title'
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator
-        screenOptions={{ headerShown: false }}
-        barStyle={({ paddingBottom: 15 }, { paddingTop: 15 })}
-      >
+      <Title />
+      <Tab.Navigator screenOptions={({ route }) => ({
+          tabBarIcon: ({ focused, color, size }) => {
+            let iconName;
+
+            if (route.name === 'Home') {
+              iconName = focused ? 'home' : 'home';
+              size = 25;
+            } else if (route.name === 'Artists') {
+              iconName = focused ? 'person-circle' : 'person-circle';
+              size = 25;
+            } else if (route.name === 'Gallery') {
+              iconName = focused ? 'images' : 'images';
+              size = 25;
+            } else if (route.name === 'Tickets') {
+              iconName = focused ? 'pricetag' : 'pricetag';
+              size = 25;
+            }
+
+            return <Ionicons name={iconName} size={size} color={color} />;
+          },
+          tabBarActiveTintColor: 'rgb(88, 6, 196)',
+          tabBarInactiveTintColor: 'gray',
+        })}>
         <Tab.Screen
           name="Home"
           component={Home}
-          options={{
-            tabBarIcon: () => (
-              <Image
-                source={require("./src/images/icons/home.png")}
-                style={{ width: 25, height: 25 }}
-              />
-            ),
-          }}
+          options={{headerShown: false}}
         />
         <Tab.Screen
           name="Artists"
           component={Artists}
-          options={{
-            tabBarIcon: () => (
-              <Image
-                source={require("./src/images/icons/artists.png")}
-                style={{ width: 25, height: 25 }}
-              />
-            ),
-          }}
+          options={{headerShown: false}}
         />
         <Tab.Screen
           name="Gallery"
           component={Gallery}
-          options={{
-            tabBarIcon: () => (
-              <Image
-                source={require("./src/images/icons/gallery.png")}
-                style={{ width: 25, height: 25 }}
-              />
-            ),
-          }}
+          options={{headerShown: false}}
         />
         <Tab.Screen
           name="Tickets"
           component={Tickets}
-          options={{
-            tabBarIcon: () => (
-              <Image
-                source={require("./src/images/icons/tickets.png")}
-                style={{ width: 25, height: 25 }}
-              />
-            ),
-          }}
+          options={{headerShown: false}}
         />
       </Tab.Navigator>
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
