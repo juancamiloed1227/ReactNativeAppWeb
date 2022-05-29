@@ -1,47 +1,55 @@
 import React from "react";
 import { ImageBackground, StyleSheet, Text, View } from "react-native";
+import RNPickerSelect from "react-native-picker-select";
+import NumericInput from 'react-native-numeric-input';
+
+const tipoBoletas =  ["Basic Pass Legends Fest", "Full Pass Legends Fest"]
 
 
-const image = require("../images/title/title.png");
-const tipoBoletas = ["Basic Pass Legends Fest", "Full Pass Legends Fest"]
-
-
-export default function Artists() {
+export default function Tickets() {
   return (
-    <View>
-      <View style={styles.header}>
-        <View style={styles.title}>
-          <ImageBackground
-            resizeMode="contain"
-            source={image}
-            style={styles.title}
-          ></ImageBackground>
-        </View>
-        <Text style={styles.tituloT}>Comprar</Text>
-      </View>
+     
       <View style={styles.container}>
-       
+       <View style={styles.row}>
       <View style={[styles.box]}>
           <Text style={styles.tituloT}>Tipo de boleta</Text>
-          
+          <RNPickerSelect 
+            placeholder={{ label: "Seleccionar", value: null }}
+                 onValueChange={(value) => console.log(value)}
+                 items={[
+                     { label: "Basic Pass Legends Fest", value: "" },
+                     { label: "Full Pass Legends Fest", value: "" }
+                 ]}
+             />  
         </View>
-        <View style={[styles.box]} />
-           
-        </View>
-    </View>
+        <View style={[styles.box]}>
+      <Text style={styles.tituloT}>Cantidad</Text>
+          <NumericInput type='up-down' onChange={value => console.log(value)} totalWidth={100} iconStyle={{ color: '#6495ED' }}minValue={0} />
+          </View>
+      </View>
+      </View>
   );
 }
 const styles = StyleSheet.create({
-  header: {
-    width: 360,
-    height: 60,
-    backgroundColor: "rgb(59, 2, 133)",
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
+  box: {
+    flex: 1,
+    height: 200,
+    width: 200,
+    padding:20,
   },
-
+   row: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 10
+  },
+container: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'flex-start', //replace with flex-end or center
+    borderBottomWidth: 1,
+    borderBottomColor: '#000'
+  },
   separadorH: {
     width: 0.1,
   },
@@ -71,4 +79,3 @@ const styles = StyleSheet.create({
 
     }
 });
-
