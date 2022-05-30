@@ -20,19 +20,19 @@ export default function Onboardingscreen({ navigation }) {
       onSkip={() => navigation.navigate("Navigation")}
       pages={[
         {
-          backgroundColor: "#AEFFF4",
+          backgroundColor: "#E1C9FF",
           image: <Image source={require("../images/onboarding/1.png")} />,
           title: "History",
           subtitle: "",
         },
         {
-          backgroundColor: "#DCC3FC",
+          backgroundColor: "#C18FFF",
           image: <Image source={require("../images/onboarding/2.png")} />,
           title: "",
           subtitle: "",
         },
         {
-          backgroundColor: "#9BCEFF",
+          backgroundColor: "#9F51FF",
           image: <Image source={require("../images/onboarding/3.png")} />,
           title: "",
           subtitle: "",
