@@ -10,29 +10,32 @@ import {
 //Para Onboarding
 import Onboarding from "react-native-onboarding-swiper";
 import { useNavigation } from "@react-navigation/native";
+//Pantallas
+import Home from "./Home";
 
 export default function Onboardingscreen({ navigation }) {
   return (
     <Onboarding
-      onDone={() => navigation.navigate("Home")}
+      onDone={() => navigation.navigate("Navigation")}
+      onSkip={() => navigation.navigate("Navigation")}
       pages={[
         {
-          backgroundColor: "#fff",
-          image: <Image source={require("../images/icons/artists.png")} />,
-          title: "Onboarding",
-          subtitle: "Done with React Native Onboarding Swiper",
+          backgroundColor: "#AEFFF4",
+          image: <Image source={require("../images/onboarding/1.png")} />,
+          title: "History",
+          subtitle: "",
         },
         {
-          backgroundColor: "#fe6e58",
-          image: <Image source={require("../images/icons/artists.png")} />,
-          title: "The Title",
-          subtitle: "This is the subtitle that sumplements the title.",
+          backgroundColor: "#DCC3FC",
+          image: <Image source={require("../images/onboarding/2.png")} />,
+          title: "",
+          subtitle: "",
         },
         {
-          backgroundColor: "#999",
-          image: <Image source={require("../images/icons/artists.png")} />,
-          title: "Triangle",
-          subtitle: "Beautiful, isn't it?",
+          backgroundColor: "#9BCEFF",
+          image: <Image source={require("../images/onboarding/3.png")} />,
+          title: "",
+          subtitle: "",
         },
       ]}
     />
