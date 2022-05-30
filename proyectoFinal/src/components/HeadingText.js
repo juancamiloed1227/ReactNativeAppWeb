@@ -13,12 +13,12 @@ export default function HeadingText({ titleText }) {
 
 const styles = StyleSheet.create({
     text: {
-        fontFamily: 'sans-serif',
         letterSpacing: .3,
-        fontSize: 24,
+        fontSize: 36,
         fontWeight: 'bold',
         textAlign: 'center',
-        marginTop: 10,
-        marginBottom: 10,
+        marginTop: 20,
+        marginBottom: 15,
+        color: '#5806c4',
     }
 })
