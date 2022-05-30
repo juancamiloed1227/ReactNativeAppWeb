@@ -26,7 +26,7 @@ export default function AnimacionSpotify() {
     ).start();
   }, [startValue, endValue, startValue]);
   return (
-    <View>
+    <View style={{marginBottom: WINDOW_WIDTH * 0.03}}>
       <View style={styles.imgAnimada}>
         <View style={styles.imgAnimada2}>
           <Animated.View
@@ -52,8 +52,6 @@ export default function AnimacionSpotify() {
           </Text>
         </View>
       </View>
-      <Text>Tickets</Text>
-      <Text>Boletitas</Text>
     </View>
   );
 }
@@ -88,6 +86,7 @@ const styles = StyleSheet.create({
     textAlign: "right",
     color: "rgb(0, 0, 0)",
     width: "60%",
+    fontSize: WINDOW_WIDTH * 0.04,
   },
 
   imagenC: {

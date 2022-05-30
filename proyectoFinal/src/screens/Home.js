@@ -3,12 +3,12 @@ import { StyleSheet, Text, ScrollView, Image, Dimensions } from "react-native";
 import HeadingText from "../components/HeadingText";
 import ArtistSlider from "../components/ArtistSlider";
 import ArtistCard from "../components/ArtistCard";
-import PlaylistAnimation from "../components/PlaylistAnimation";
 import PriceSlider from "../components/PriceSlider";
 import PriceCard from "../components/PriceCard";
 import PartnerSlider from "../components/PartnerSlider";
 import Map from "../components/Map";
 import Song from "../components/Song";
+import AnimacionSpotify from "../components/AnimacionSpotify";
 
 const windowWidth = Dimensions.get("window").width;
 
@@ -34,6 +34,7 @@ export default function Home() {
         <ArtistCard sourceImg={'https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/2/a/d/e/2ade9bdddbfc84645a4fba007eb031ca.jpg'} name= 'Jesse & Joy' time='1:00 AM'/>
       </ArtistSlider>
       <HeadingText titleText='Playlist'/>
+      <AnimacionSpotify/>
       <Song Thumbnail='https://i.scdn.co/image/ab67616d00001e0249d694203245f241a1bcaa72' Title='Moscow Mule' Artist='Bad Bunny' LinkSong='https://open.spotify.com/track/6Xom58OOXk2SoU711L2IXO?si=5ed3392be93e4dbb'/>
       <Song Thumbnail='https://i.scdn.co/image/ab67616d0000b273d4daf28d55fe4197ede848be' Title='Levitating' Artist='Dua Lipa' LinkSong='https://open.spotify.com/track/5nujrmhLynf4yMoMtj8AQF?si=ab06194646534509'/>
       <Song Thumbnail='https://i.scdn.co/image/ab67616d0000b2734121faee8df82c526cbab2be' Title='Thriller' Artist='Michael Jackson' LinkSong='https://open.spotify.com/track/3S2R0EVwBSAVMd5UMgKTL0?si=30bb778a00df4126'/>
