@@ -1,5 +1,7 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, Dimensions } from 'react-native';
+
+const windowWidth = Dimensions.get('window').width;
 
 export default function HeadingText({ titleText }) {
     return (
@@ -14,11 +16,11 @@ export default function HeadingText({ titleText }) {
 const styles = StyleSheet.create({
     text: {
         letterSpacing: .3,
-        fontSize: 36,
+        fontSize: windowWidth * 0.08,
         fontWeight: 'bold',
         textAlign: 'center',
-        marginTop: 20,
-        marginBottom: 15,
+        marginTop: windowWidth * 0.05,
+        marginBottom: windowWidth * 0.05,
         color: '#5806c4',
     }
 })

@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet,Text, Image, TouchableOpacity, View, Linking, Dimensions } from 'react-native';
 
+
 const windowWidth = Dimensions.get('window').width;
 
 export default function ArtistItem({ ImageSrc, Name, Description, LinkPlaylist }) {
@@ -47,13 +48,13 @@ const styles = StyleSheet.create({
         borderBottomLeftRadius: 10,
     },
     name: {
-        fontSize: 24,
+        fontSize: windowWidth * 0.05,
         fontWeight: 'bold',
         color: '#5806c4',
         marginBottom: windowWidth * 0.015,
     },
     description: {
-        fontSize: 16,
+        fontSize: windowWidth * 0.035,
         color: '#000',
         marginBottom: windowWidth * 0.05,
     },
@@ -66,7 +67,7 @@ const styles = StyleSheet.create({
     },
     btnText: {
         color: '#fff',
-        fontSize: 16,
+        fontSize: windowWidth * 0.035,
         textAlign: 'center',
         fontWeight: 'bold',
     },
