@@ -71,27 +71,33 @@ export default function Tickets() {
           <Text style={styles.tituloResumen}>Resumen de la compra</Text>
           <View style={styles.contenedorinfoResumen}>
             <View style={styles.contenedorinfoBoleta}>
-              <Image
-                style={styles.imgBoleta}
-                source={{
-                  uri: "https://cdn-icons-png.flaticon.com/512/3702/3702886.png",
-                }}
-              />
+              <View style={styles.contenedorimgBoleta2}>
+                <Image
+                  resizeMode="contain"
+                  style={styles.imgBoleta2}
+                  source={{
+                    uri: "https://cdn-icons-png.flaticon.com/512/3702/3702886.png",
+                  }}
+                />
+              </View>
               <Text style={styles.nombreBoleta}>Basic Pass Legends Fest</Text>
-              <Text style={styles.nombreBoleta}>$</Text>
-              <Text style={styles.nombreBoleta}>Cantidad:</Text>
+              <Text style={styles.nombreBoleta2}>$</Text>
+              <Text style={styles.nombreBoleta3}>Cantidad:</Text>
             </View>
 
             <View style={styles.contenedorinfoBoleta}>
-              <Image
-                style={styles.imgBoleta}
-                source={{
-                  uri: "https://cdn-icons-png.flaticon.com/512/1061/1061702.png",
-                }}
-              />
+              <View style={styles.contenedorimgBoleta2}>
+                <Image
+                  resizeMode="contain"
+                  style={styles.imgBoleta2}
+                  source={{
+                    uri: "https://cdn-icons-png.flaticon.com/512/1061/1061702.png",
+                  }}
+                />
+              </View>
               <Text style={styles.nombreBoleta}>Full Pass Legends Fest </Text>
-              <Text style={styles.nombreBoleta}>$</Text>
-              <Text style={styles.nombreBoleta}>Cantidad:</Text>
+              <Text style={styles.nombreBoleta2}>$</Text>
+              <Text style={styles.nombreBoleta3}>Cantidad:</Text>
             </View>
           </View>
         </View>
@@ -144,6 +150,11 @@ const styles = StyleSheet.create({
   imgBoleta: {
     width: 30,
     height: 30,
+  },
+
+  imgBoleta2: {
+    width: "100%",
+    height: "100%",
   },
 
   contenedor2: {
@@ -236,7 +247,34 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "flex-start",
     padding: 10,
-    width: "31%",
+    width: "40%",
+  },
+
+  nombreBoleta2: {
+    color: "white",
+    fontSize: 13,
+    alignItems: "center",
+    justifyContent: "flex-start",
+    padding: 10,
+    width: "10%",
+  },
+
+  nombreBoleta3: {
+    color: "white",
+    fontSize: 13,
+    alignItems: "center",
+    justifyContent: "flex-start",
+    padding: 10,
+    width: "30%",
+  },
+
+  contenedorimgBoleta2: {
+    height: "100%",
+    width: "20%",
+    display: "flex",
+    alignContent: "center",
+    justifyContent: "center",
+    padding: "5%",
   },
 
   titulo: {
