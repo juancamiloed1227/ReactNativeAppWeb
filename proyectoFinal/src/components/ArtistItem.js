@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         width: windowWidth * 0.9,
-        height: windowWidth * 0.55,
+        height: windowWidth * 0.65,
         backgroundColor: '#fff',
         borderRadius: 10,
     },
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     },
     image: {
         width: windowWidth * 0.35,
-        height: windowWidth * 0.55,
+        height: windowWidth * 0.65,
         borderTopLeftRadius: 10,
         borderBottomLeftRadius: 10,
     },
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
         marginBottom: windowWidth * 0.015,
     },
     description: {
-        fontSize: windowWidth * 0.035,
+        fontSize: windowWidth * 0.03,
         color: '#000',
         marginBottom: windowWidth * 0.05,
     },
